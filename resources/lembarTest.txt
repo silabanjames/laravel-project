@@ -1,0 +1,48 @@
+
+// Mass assignment to insert
+App\Models\Post::create([
+    'title'=> 'Judul Post Pertama',
+    'categories_id'=>1,
+    'slug'=>'post-pertama',
+    'excerpt'=> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    'body'=>'<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur recusandae sapiente et maxime voluptates exercitationem officiis vitae possimus, porro molestiae ea blanditiis odio numquam vel voluptate voluptatibus eius illum dolore molestias corporis architecto, ad, amet quasi sunt!</p> <p>Molestiae atque repellendus odit neque blanditiis molestias, repudiandae iusto tempore eveniet quas quia officia impedit doloremque aperiam? Vitae asperiores incidunt tenetur quam non laudantium reiciendis sapiente quisquam perspiciatis, saepe repudiandae in corporis fugiat accusantium voluptas alias.</p> <p>Incidunt officia tempora amet ea nam laudantium fuga ut odit nulla perspiciatis magni illo, fugiat aut rem, doloribus vel mollitia dignissimos aperiam recusandae commodi veritatis dolores nobis soluta? Accusantium dignissimos natus iusto, rem inventore dolorem, amet sed quidem autem facilis ipsam soluta adipisci aspernatur quos reprehenderit qui.</p>'
+])
+
+App\Models\Post::create([
+    'title'=> 'Judul Post Kedua',
+    'slug'=>'post-kedua',
+    'categories_id'=>1,
+    'excerpt'=> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    'body'=>'<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur recusandae sapiente et maxime voluptates exercitationem officiis vitae possimus, porro molestiae ea blanditiis odio numquam vel voluptate voluptatibus eius illum dolore molestias corporis architecto, ad, amet quasi sunt!</p> <p>Molestiae atque repellendus odit neque blanditiis molestias, repudiandae iusto tempore eveniet quas quia officia impedit doloremque aperiam? Vitae asperiores incidunt tenetur quam non laudantium reiciendis sapiente quisquam perspiciatis, saepe repudiandae in corporis fugiat accusantium voluptas alias.</p> <p>Incidunt officia tempora amet ea nam laudantium fuga ut odit nulla perspiciatis magni illo, fugiat aut rem, doloribus vel mollitia dignissimos aperiam recusandae commodi veritatis dolores nobis soluta? Accusantium dignissimos natus iusto, rem inventore dolorem, amet sed quidem autem facilis ipsam soluta adipisci aspernatur quos reprehenderit qui.</p>'
+])
+
+App\Models\Post::create([
+    'title'=> 'Judul Post Ketiga',
+    'slug'=>'post-ketiga',
+    'excerpt'=> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    'body'=>'<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur recusandae sapiente et maxime voluptates exercitationem officiis vitae possimus, porro molestiae ea blanditiis odio numquam vel voluptate voluptatibus eius illum dolore molestias corporis architecto, ad, amet quasi sunt!</p> <p>Molestiae atque repellendus odit neque blanditiis molestias, repudiandae iusto tempore eveniet quas quia officia impedit doloremque aperiam? Vitae asperiores incidunt tenetur quam non laudantium reiciendis sapiente quisquam perspiciatis, saepe repudiandae in corporis fugiat accusantium voluptas alias.</p> <p>Incidunt officia tempora amet ea nam laudantium fuga ut odit nulla perspiciatis magni illo, fugiat aut rem, doloribus vel mollitia dignissimos aperiam recusandae commodi veritatis dolores nobis soluta? Accusantium dignissimos natus iusto, rem inventore dolorem, amet sed quidem autem facilis ipsam soluta adipisci aspernatur quos reprehenderit qui.</p>',
+    'categories_id'=>3
+])
+
+
+// Mass assignment to update
+App\Models\Post::find(3)->update(['title'=>'Judul Post Ke Tiga Berubah'])
+
+// Mass assignment to update
+App\Models\Post::where('title', 'Judul Post Ke Tiga Berubah')->update(['excerpt'=>'Excerpt post ketiga berubah juga'])
+
+// Category
+Categories::create([
+    'name' => 'Programming',
+    'slug' => 'programming'   
+])
+
+Categories::create([
+    'name' => 'Web-Design',
+    'slug' => 'web-design'   
+])
+
+Categories::create([
+    'name' => 'Personal',
+    'slug' => 'personal'   
+])
